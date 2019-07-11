@@ -1,0 +1,11 @@
+
+$breakpoint-sm      : 320px;
+$breakpoint-md      : 768px;
+$breakpoint-lg      : 1024px;
+
+$dashboard-header   : blue;
+$dashboard: (
+  title: $dashboard-header,
+  search: lighten($dashboard-header, 10%),
+  alert: darken($dashboard-header, 10%),
+);

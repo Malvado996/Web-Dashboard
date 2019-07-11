@@ -1,0 +1,84 @@
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-rows: 60px 60px auto;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main main";
+    @include mq($breakpoint-md) {
+      grid-template-areas:
+        "header header"
+        "nav main"
+        "nav main";
+    }
+}
+
+
+header {
+  grid-area: header;
+  background-color: green;
+}
+
+nav {
+  grid-area: nav;
+  background-color: yellow;
+}
+
+main {
+  grid-area: main;
+  grid-row-start: 3;
+  grid-row-end: -1;
+  background-color: red;
+    @include mq($breakpoint-md) {
+      grid-row-start: 2;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(50px, auto);
+      grid-template-areas:
+        "dashboard dashboard"
+        "traffic traffic"
+        "daily-traffic mobile-users"
+        "social-stats social-stats"
+        "new-members recent-activities"
+        "message-users settings";
+    }
+}
+
+
+.dashboard {
+  grid-area: dashboard;
+}
+
+.traffic {
+  grid-area: traffic;
+}
+
+.daily-traffic {
+  grid-area: daily-traffic;
+}
+
+.mobile-users {
+  grid-area: mobile-users;
+}
+
+.social-stats {
+  grid-area: social-stats;
+}
+
+.new-members {
+  grid-area: new-members;
+}
+
+.recent-activities {
+  grid-area: recent-activities
+}
+
+.message-users {
+  grid-area: message-users;
+}
+
+.settings {
+  grid-area: settings;
+}
