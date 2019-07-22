@@ -1,8 +1,9 @@
 console.log('hello world');
 
+// Line Chart ==================================================================
+
 let trafficCanvas = document.getElementById('traffic-chart');
 
-// trafficData =================================================================
 let trafficData = {
   labels: [
     "16-22",
@@ -36,8 +37,6 @@ let trafficData = {
   }]
 };
 
-// trafficOptions ==============================================================
-
 let trafficOptions = {
   aspectRatio: 2.5,
   animation: {
@@ -55,10 +54,75 @@ let trafficOptions = {
   }
 };
 
-// trafficChart ================================================================
-
 let trafficChart = new Chart(trafficCanvas, {
   type: 'line',
   data: trafficData,
   options: trafficOptions
+});
+
+// Daily Traffic Bar Chart =====================================================
+
+const dailyCanvas = document.getElementById('daily-chart');
+
+const dailyData = {
+  labels: ["S", "M", "T", "W", "T", "F", "S"],
+  datasets: [{
+    label: '# of Hits',
+    data: [75, 115, 175, 125, 225, 200, 100],
+    backgroundColor: '#7477bf',
+    borderWidth: 1
+  }]
+};
+
+const dailyOptions = {
+  scales: {
+    yAxes: [{
+      ticks: {
+        beginAtZero: true
+      }
+    }]
+  },
+  legend : {
+    display: false
+  }
+};
+
+let dailyChart = new Chart(dailyCanvas, {
+  type: 'bar',
+  data: dailyData,
+  options: dailyOptions
+});
+
+// Mobile Chart ================================================================
+
+const mobileCanvas = document.getElementById('mobile-chart');
+
+const mobileData = {
+  labels: ['Desktop', 'Tablet', 'Phones',],
+  datasets: [{
+    label: '# of Users',
+    data: [2000, 550, 500,],
+    borderWidth: 0,
+    backgroundColor: [
+      '#7477bf',
+      '#78cf82',
+      '#51b6c8',
+    ]
+  }]
+};
+
+const mobileOptions = {
+  legend: {
+    position: 'bottom',
+    labels: {
+      boxWidth: 20,
+      fontStyle: 'bold',
+    }
+  }
+}
+
+let mobileChart = new Chart(mobileCanvas, {
+  type: 'doughnut',
+  data: mobileData,
+  options: mobileOptions,
 });

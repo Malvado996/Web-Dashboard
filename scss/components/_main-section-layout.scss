@@ -22,3 +22,21 @@
     "dash-title search"
     "alert alert";
 }
+
+.widget-container-traffic {
+  width: 90vw;
+}
+
+.widget-container-daily {
+  width: 80vw;
+  @include mq($breakpoint-md) {
+    width: 45vw;
+    }
+}
+
+.widget-container-mobile {
+  width: 65vw;
+  @include mq($breakpoint-md) {
+    width: 25vw;
+    }
+}

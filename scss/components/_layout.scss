@@ -2,7 +2,7 @@
 #grid-container {
   display: grid;
   grid-template-columns: 60px auto;
-  grid-template-rows: 60px 60px auto;
+  grid-template-rows: auto 60px auto;
   grid-template-areas:
     "header header"
     "nav nav"
@@ -41,7 +41,7 @@ main {
         "traffic traffic"
         "daily-traffic mobile-users"
         "social-stats social-stats"
-        "new-members recent-activities"
+        "members recent-activities"
         "message-users settings";
     }
 }
@@ -67,8 +67,8 @@ main {
   grid-area: social-stats;
 }
 
-.new-members {
-  grid-area: new-members;
+.members {
+  grid-area: members;
 }
 
 .recent-activities {
