@@ -24,19 +24,23 @@
 }
 
 .widget-container-traffic {
+  margin: 13px auto;
   width: 90vw;
 }
 
 .widget-container-daily {
-  width: 80vw;
+  margin: 0 auto;
+  padding-left: 13px;
+  max-width: 80vw;
   @include mq($breakpoint-md) {
-    width: 45vw;
+    width: 55vw;
     }
 }
 
 .widget-container-mobile {
-  width: 65vw;
+  margin: 0 auto;
+  max-width: 55vw;
   @include mq($breakpoint-md) {
-    width: 25vw;
+    width: 27vw;
     }
 }

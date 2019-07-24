@@ -1,0 +1,20 @@
+
+.nav-container {
+  @include flexContainer($just: space-around);
+  @include mq($breakpoint-md) {
+    @include flexContainer($dir: column,
+                           $just: center,)
+  }
+}
+
+.nav-icon {
+  height: 30px;
+}
+
+.nav-a {
+  height: 30px;
+  margin: 9px 0;
+  @include mq($breakpoint-md) {
+    margin: 9px auto;
+  }
+}
