@@ -1,0 +1,37 @@
+
+
+.social-wrapper {
+  @include flexContainer ($dir: column,
+                          $alignItem: center);
+  @include mq ($breakpoint-md) {
+    @include flexContainer ($dir: row,
+                            $just: space-around)
+  }
+}
+
+.social-container {
+  width: 232px;
+  height: 119px;
+  @include flexContainer ($dir: row,
+                          $alignItem: center);
+}
+
+// DIV THAT CONTAINS .SOCIAL-ICON SVG
+.social-image {
+  height: 100px;
+  width: 100px;
+  margin: 0 25px;
+  border-radius: 50%;
+  background-color: yellow;
+  @include flexContainer ($just: center,
+                          $alignItem: center);
+}
+
+.social-icon {
+  height: $socialIconSize-sm;
+  width: $socialIconSize-sm;
+}
+
+.social-text {
+  margin: 0 auto;
+}

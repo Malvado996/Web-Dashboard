@@ -23,6 +23,15 @@
     "alert alert";
 }
 
+.traffic-nav {
+  margin-left: -50px;
+  @include flexContainer($dir: row, $just: space-around)
+}
+
+.traffic-nav-link {
+  list-style-type: none;
+}
+
 .widget-container-traffic {
   margin: 13px auto;
   width: 90vw;

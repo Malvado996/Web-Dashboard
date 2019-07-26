@@ -1,4 +1,26 @@
 
+// TYPOGRAPHY SCALE 16PX BASE
+//
+// 1em       : 16px
+// 1.25em    : 20px
+// 1.563em   : 25px
+// 1.953em   : 31.25px
+// 2.441em   : 39.06px
+// 3.052em   : 48.83px
+// 3.815em   : 61.04px
+// 4.768em   : 76.29px
+// 5.96em    : 95.37px
+// 7.451em   : 119.21px
+// 9.313em   : 149.01px
+// 11.642em  : 186.26px
+// 14.552em  : 232.83px
+// 18.19em   : 291.04px
+// 22.737em  : 363.80px
+// 28.422em  : 454.75px
+// 35.527em  : 568.43px
+// 44.409em  : 710.54px
+//
+
 $breakpoint-sm      : 320px;
 $breakpoint-md      : 768px;
 $breakpoint-lg      : 1024px;
@@ -9,3 +31,8 @@ $dashboard: (
   search: lighten($dashboard-header, 10%),
   alert: darken($dashboard-header, 10%),
 );
+
+
+$socialIconSize-sm    : 50px;
+$socialIconSize-md    : 60px;
+$socialIconSize-lg    : 70px;

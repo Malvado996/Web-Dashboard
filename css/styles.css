@@ -240,14 +240,12 @@ main {
 .header-container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center; }
   @media (min-width: 320px) {
     .header-container {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
       justify-content: space-between; } }
 
 .header-title {
@@ -259,7 +257,6 @@ main {
 .header-info {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
   margin: 0 auto; }
@@ -269,11 +266,10 @@ main {
 
 .bell-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; }
+  flex-direction: row; }
 
 .bell-icon {
-  height: 30px;
+  height: 20px;
   margin: 0 3px; }
 
 #notifications {
@@ -282,29 +278,29 @@ main {
   left: -9px;
   border-radius: 50%;
   background-color: white;
-  height: 10px;
-  width: 10px; }
+  height: 6px;
+  width: 6px; }
 
 .profile-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center; }
 
 .profile-pic {
   border-radius: 50%;
-  max-height: 30px;
+  max-height: 39px;
   margin: 9px; }
+
+.profile-name {
+  text-transform: uppercase; }
 
 .nav-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around; }
   @media (min-width: 768px) {
     .nav-container {
       display: flex;
       flex-direction: column;
-      flex-wrap: wrap;
       justify-content: center; } }
 
 .nav-icon {
@@ -336,6 +332,15 @@ main {
   grid-template-rows: auto auto;
   grid-template-areas: "dash-title search" "alert alert"; }
 
+.traffic-nav {
+  margin-left: -50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.traffic-nav-link {
+  list-style-type: none; }
+
 .widget-container-traffic {
   margin: 13px auto;
   width: 90vw; }
@@ -354,5 +359,59 @@ main {
   @media (min-width: 768px) {
     .widget-container-mobile {
       width: 27vw; } }
+
+.social-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media (min-width: 768px) {
+    .social-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; } }
+
+.social-container {
+  width: 232px;
+  height: 119px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.social-image {
+  height: 100px;
+  width: 100px;
+  margin: 0 25px;
+  border-radius: 50%;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.social-icon {
+  height: 50px;
+  width: 50px; }
+
+.social-text {
+  margin: 0 auto; }
+
+.member-image {
+  height: 61px;
+  margin: 0 8px;
+  border-radius: 5px; }
+
+.members-container {
+  margin: 16px 0;
+  max-width: 323px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center; }
+
+.members-container p {
+  margin: 0 auto; }
+  @media (min-width: 320px) {
+    .members-container p {
+      margin-left: auto;
+      margin-right: 0; } }
 
 /*# sourceMappingURL=styles.css.map */

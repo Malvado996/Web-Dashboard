@@ -12,7 +12,7 @@
 @mixin flexContainer (
   $disp: flex,
   $dir: null,
-  $wrap: wrap,
+  $wrap: null,
   $just: null,
   $alignItem: null,
   $alignContent: null,) {
