@@ -35,7 +35,7 @@ main {
       grid-row-start: 2;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: minmax(50px, auto);
+      grid-auto-rows: minmax(100px, auto);
       grid-template-areas:
         "dashboard dashboard"
         "traffic traffic"

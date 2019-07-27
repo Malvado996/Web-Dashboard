@@ -5,6 +5,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
   <link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -13,7 +14,7 @@
 
   <div id="grid-container">
 
-  <!-- HEADER -->
+  <!-- HEADER ------------------------------------------------------------------>
   <header>
 
     <div class="header-container">
@@ -40,7 +41,7 @@
 
   </header>
 
-  <!-- NAVIGATION -->
+  <!-- NAVIGATION -------------------------------------------------------------->
   <nav>
 
     <div class="nav-container">
@@ -122,7 +123,7 @@
 
     </section>
 
-    <!-- SOCIAL STATS -->
+    <!-- SOCIAL STATS --------------------------------------------------------->
     <section class="social-stats">
       <h4>social-stats</h4>
 
@@ -214,7 +215,8 @@
 
     </section>
 
-    <!-- NEW MEMBERS AREA -->
+
+    <!-- NEW MEMBERS AREA ----------------------------------------------------->
     <section class="members">
 
       <h4>new members</h4>
@@ -257,7 +259,7 @@
 
     </section>
 
-    <!-- RECENT ACTIVITIES -->
+    <!-- RECENT ACTIVITIES SECTION --------------------------------------------->
     <section class="recent-activities">
 
       <h4>recent-activities</h4>
@@ -296,7 +298,8 @@
 
     </section>
 
-    <!-- MESSAGE USERS -->
+
+    <!-- MESSAGE USERS SECTION ------------------------------------------------>
     <section class="message-users">
 
       <h4>message-users</h4>
@@ -304,45 +307,76 @@
       <form class="message-container">
 
           <input type="text" placeholder="Search for user"
-            class="form-field" id="userField">
+            class="message-search" id="userField">
 
           <textarea placeholder="Message for user"
             class="form-area" id="messageField">
             </textarea>
 
-          <button class="button-primary" id="send">
+          <button class="message-button" id="send">
             Send</button>
 
         </form>
 
     </section>
 
-    <!-- SETTINGS -->
+    <!-- SETTINGS SECTION ------------------------------------------------------>
     <section class="settings">
 
       <h4>settings</h4>
 
-      <!-- custom css toggle code -->
-      <!-- custom css toggle code -->
+      <div class="email-toggle-container">
 
-      <select class="form-field" id="timezone">
-        <option disabled selected>Select a Timezone</option>
-        <option>Eastern</option>
-        <option>Westeros</option>
-        <option>Mordor</option>
-        <option>Narnia</option>
-        <option>Never Never Land</option>
-      </select>
+          <p class="settings-text">Send Email Notifications</p>
+          <!-- custom css toggle code -->
+          <label class="switch-light switch-ios toggle" onclick="">
+              <input type="checkbox">
 
-      <div class="settings-button">
-        <button class="button-primary" id="save">Save</button>
-        <button class="button-disabled" id="cancel">Cancel</button>
+              <span>
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+          </label>
+
+      </div>
+
+      <div class="public-toggle-container">
+
+          <p class="settings-text">Set Profile to Public</p>
+          <!-- custom css toggle code -->
+          <label class="switch-light switch-ios toggle" onclick="">
+              <input type="checkbox">
+
+              <span>
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+          </label>
+
+       </div>
+
+      <div class="timezone-container">
+          <select class="timezone-field" id="timezone">
+            <option value="Select a Timezone">Select a Timezone</option>
+            <option value="Eastern">Eastern</option>
+            <option value="Westeros">Westeros</option>
+            <option value="Mordor">Mordor</option>
+            <option value="Narnia">Narnia</option>
+            <option value="Never Never Land">Never Never Land</option>
+          </select>
+
+          <div class="settings-button-container">
+            <button class="button-primary" id="save">Save</button>
+            <button class="button-disabled" id="cancel">Cancel</button>
+          </div>
       </div>
 
     </section>
 
   </main>
-</div> <!--.grid-container div close -->
+</div> <!-- .grid-container div close ----------------------------------------->
   <!-- javascript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script src="js/main.js"></script>

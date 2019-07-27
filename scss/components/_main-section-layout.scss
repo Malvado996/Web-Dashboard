@@ -38,18 +38,18 @@
 }
 
 .widget-container-daily {
-  margin: 0 auto;
+  margin-top: 50px;
   padding-left: 13px;
-  max-width: 80vw;
+  max-width: 90vw;
   @include mq($breakpoint-md) {
-    width: 55vw;
+    width: 45vw;
     }
 }
 
 .widget-container-mobile {
   margin: 0 auto;
-  max-width: 55vw;
+  max-width: 50vw;
   @include mq($breakpoint-md) {
-    width: 27vw;
+    width: 30vw;
     }
 }

@@ -1,0 +1,35 @@
+
+.member-image {
+  height: 61px;
+  margin: 0 8px;
+  border-radius: 5px;
+}
+
+.members-container {
+  margin: 16px 0;
+  max-width: 323px;
+  @include flexContainer($dir: row,
+                         $wrap: wrap,
+                         $alignItem: center)
+}
+
+.members-container p {
+  margin: 0 auto;
+  @include mq ($breakpoint-sm) {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+
+.recent-activities-container {
+  margin: 16px 0;
+  width: 323px;
+  @include flexContainer($dir: row,
+                         $wrap: wrap,
+                         $alignItem: center)
+}
+
+.recent-activities-text p {
+  margin: 0 0 6px 0;
+}

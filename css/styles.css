@@ -207,7 +207,7 @@ main {
       grid-row-start: 2;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: minmax(50px, auto);
+      grid-auto-rows: minmax(100px, auto);
       grid-template-areas: "dashboard dashboard" "traffic traffic" "daily-traffic mobile-users" "social-stats social-stats" "members recent-activities" "message-users settings"; } }
 
 .dashboard {
@@ -346,19 +346,19 @@ main {
   width: 90vw; }
 
 .widget-container-daily {
-  margin: 0 auto;
+  margin-top: 50px;
   padding-left: 13px;
-  max-width: 80vw; }
+  max-width: 90vw; }
   @media (min-width: 768px) {
     .widget-container-daily {
-      width: 55vw; } }
+      width: 45vw; } }
 
 .widget-container-mobile {
   margin: 0 auto;
-  max-width: 55vw; }
+  max-width: 50vw; }
   @media (min-width: 768px) {
     .widget-container-mobile {
-      width: 27vw; } }
+      width: 30vw; } }
 
 .social-wrapper {
   display: flex;
@@ -413,5 +413,68 @@ main {
     .members-container p {
       margin-left: auto;
       margin-right: 0; } }
+
+.recent-activities-container {
+  margin: 16px 0;
+  width: 323px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center; }
+
+.recent-activities-text p {
+  margin: 0 0 6px 0; }
+
+.message-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+.message-search {
+  width: 180px;
+  margin: 6px auto; }
+
+.form-area {
+  height: 100px; }
+
+.message-button {
+  width: 75px;
+  margin: 6px auto;
+  border-radius: 3px; }
+
+.email-toggle-container {
+  margin-bottom: 9px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.public-toggle-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.toggle {
+  width: 75px;
+  margin: auto auto; }
+
+.timezone-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.timezone-field {
+  margin: 10px auto;
+  width: 200px; }
+
+.settings-button-container {
+  width: 150px;
+  margin: 6px auto; }
+
+.settings-text {
+  width: 175px;
+  padding-left: 6px;
+  font-size: 12px;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=styles.css.map */

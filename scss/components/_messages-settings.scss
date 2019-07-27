@@ -1,0 +1,58 @@
+
+// ELEMENTS FOR MESSAGES SECTION -----------------------------------------------
+.message-container {
+  width: 90%;
+  margin: 0 auto;
+  @include flexContainer($dir: column,)
+}
+
+.message-search {
+  width: 180px;
+  margin: 6px auto;
+}
+
+.form-area {
+  height: 100px;
+}
+
+.message-button {
+  width: 75px;
+  margin: 6px auto;
+  border-radius: 3px;
+}
+
+// ELEMENTS FOR SETTINGS SECTION -----------------------------------------------
+.email-toggle-container {
+  margin-bottom: 9px;
+  @include flexContainer ($dir: row, $alignItem: center)
+}
+
+.public-toggle-container {
+  @include flexContainer ($dir: row, $alignItem: center)
+}
+
+.toggle {
+  width: 75px;
+  margin: auto auto;
+}
+
+.timezone-container {
+  @include flexContainer ($dir: column, $just: center)
+}
+
+.timezone-field {
+  margin: 10px auto;
+  width: 200px;
+}
+
+.settings-button-container {
+  width: 150px;
+  margin: 6px auto;
+}
+
+.settings-text {
+  width: 175px;
+  padding-left: 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
