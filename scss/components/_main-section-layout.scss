@@ -46,33 +46,36 @@
 // LINE CHART AND NAV ==========================================================
 
 .traffic-header {
+    @include mq($breakpoint-sm) {
     @include flexContainer($dir: row,
                            $just: space-between,
                            $alignItem: center)
+    }
 }
 
 .traffic-nav {
-  margin: 0 13px 0 0;
+  padding: 0;
+  margin: 0 auto 9px;
   @include flexContainer($dir: row,
                          $just: space-between,
                          $wrap: wrap)
 }
 
 .traffic-nav-link {
-  margin: 3px 16px;
+  margin: 3px 9px;
   list-style-type: none;
 }
 
+// LINE CHART ==================================================================
 .widget-container-traffic {
-
+  margin: 0 auto;
   width: 90vw;
 }
 
 // DAILY CHART =================================================================
 .widget-container-daily {
-  margin-top: 50px;
-  padding-left: 13px;
-  max-width: 90vw;
+  margin: 0 auto;
+  width: 80vw;
   @include mq($breakpoint-md) {
     width: 45vw;
     }
@@ -80,8 +83,8 @@
 
 // MOBILE CHART ================================================================
 .widget-container-mobile {
-
-  max-width: 50vw;
+  margin: 0 auto;
+  width: 50vw;
   @include mq($breakpoint-md) {
     width: 30vw;
     }

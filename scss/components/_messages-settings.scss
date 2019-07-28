@@ -7,13 +7,13 @@
 }
 
 .message-search {
-  width: 180px;
+  width: 200px;
   margin: 6px auto;
 }
 
 .form-area {
   height: 100px;
-  width: 250px;
+  width: 200px;
   margin: 0 auto;
 }
 
@@ -48,8 +48,13 @@
 }
 
 .settings-button-container {
-  width: 150px;
-  margin: 6px auto;
+  width: 130px;
+  margin: 6px auto 16px;
+  @include flexContainer ($just: space-around)
+}
+
+.button-primary, .button-disabled {
+  width: 58.25px;
 }
 
 .settings-text {

@@ -350,36 +350,39 @@ main {
 .alert-banner p {
   margin: 3px 9px; }
 
-.traffic-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center; }
+@media (min-width: 320px) {
+  .traffic-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; } }
 
 .traffic-nav {
-  margin: 0 13px 0 0;
+  padding: 0;
+  margin: 0 auto 9px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between; }
 
 .traffic-nav-link {
-  margin: 3px 16px;
+  margin: 3px 9px;
   list-style-type: none; }
 
 .widget-container-traffic {
+  margin: 0 auto;
   width: 90vw; }
 
 .widget-container-daily {
-  margin-top: 50px;
-  padding-left: 13px;
-  max-width: 90vw; }
+  margin: 0 auto;
+  width: 80vw; }
   @media (min-width: 768px) {
     .widget-container-daily {
       width: 45vw; } }
 
 .widget-container-mobile {
-  max-width: 50vw; }
+  margin: 0 auto;
+  width: 50vw; }
   @media (min-width: 768px) {
     .widget-container-mobile {
       width: 30vw; } }
@@ -401,9 +404,9 @@ main {
   align-items: center; }
 
 .social-image {
-  height: 100px;
-  width: 100px;
-  margin: 0 25px;
+  height: 70px;
+  width: 70px;
+  margin: 0 15px;
   border-radius: 50%;
   background-color: yellow;
   display: flex;
@@ -411,8 +414,8 @@ main {
   align-items: center; }
 
 .social-icon {
-  height: 50px;
-  width: 50px; }
+  height: 30px;
+  width: 30px; }
 
 .social-text {
   margin: 0 auto; }
@@ -455,12 +458,12 @@ main {
   flex-direction: column; }
 
 .message-search {
-  width: 180px;
+  width: 200px;
   margin: 6px auto; }
 
 .form-area {
   height: 100px;
-  width: 250px;
+  width: 200px;
   margin: 0 auto; }
 
 .message-button {
@@ -493,8 +496,13 @@ main {
   width: 200px; }
 
 .settings-button-container {
-  width: 150px;
-  margin: 6px auto; }
+  width: 130px;
+  margin: 6px auto 16px;
+  display: flex;
+  justify-content: space-around; }
+
+.button-primary, .button-disabled {
+  width: 58.25px; }
 
 .settings-text {
   width: 175px;
