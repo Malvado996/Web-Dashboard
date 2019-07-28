@@ -2,7 +2,7 @@
 
 .social-wrapper {
   @include flexContainer ($dir: column,
-                          $alignItem: center);
+                          );
   @include mq ($breakpoint-md) {
     @include flexContainer ($dir: row,
                             $just: space-around)

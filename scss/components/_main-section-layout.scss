@@ -1,42 +1,74 @@
+
+// DASHBOARD AREA LAYOUT AND ELEMENTS/CHARTS ===================================
+
+.dash-title-search-container {
+  @include flexContainer($dir: row, $just: space-between)
+}
+
 .dash-title {
-  grid-area: dash-title;
+  text-align: center;
+  border-radius: 0 9px 0 0;
   background-color: map-get($dashboard, title);
 }
 
+.dash-title h2 {
+  font-size: 16px;
+  padding: 0 9px;
+}
+
+// SEARCHBAR DIV CONTAINER
 .search {
-  grid-area: search;
-  margin-left: auto;
+  @include flexContainer($just: center);
   background-color: map-get($dashboard, search);
 }
 
-.alert {
-  grid-area: alert;
-  background-color: map-get($dashboard, alert);
+.searchbar {
+  width: 130px;
+  border-radius: 5px;
+  margin: auto 6px auto 6px;
 }
 
-.dashboard {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    "dash-title search"
-    "alert alert";
+.alert-banner {
+  display: none;
+  width: 97%;
+  margin: 13px auto;
+  border-radius: 6px;
+  background-color: map-get($dashboard, alert);
+  @include flexContainer($dir: row, $just: space-between);
+}
+
+.alert-banner p {
+  margin: 3px 9px;
+}
+
+
+
+// LINE CHART AND NAV ==========================================================
+
+.traffic-header {
+    @include flexContainer($dir: row,
+                           $just: space-between,
+                           $alignItem: center)
 }
 
 .traffic-nav {
-  margin-left: -50px;
-  @include flexContainer($dir: row, $just: space-around)
+  margin: 0 13px 0 0;
+  @include flexContainer($dir: row,
+                         $just: space-between,
+                         $wrap: wrap)
 }
 
 .traffic-nav-link {
+  margin: 3px 16px;
   list-style-type: none;
 }
 
 .widget-container-traffic {
-  margin: 13px auto;
+
   width: 90vw;
 }
 
+// DAILY CHART =================================================================
 .widget-container-daily {
   margin-top: 50px;
   padding-left: 13px;
@@ -46,8 +78,9 @@
     }
 }
 
+// MOBILE CHART ================================================================
 .widget-container-mobile {
-  margin: 0 auto;
+
   max-width: 50vw;
   @include mq($breakpoint-md) {
     width: 30vw;

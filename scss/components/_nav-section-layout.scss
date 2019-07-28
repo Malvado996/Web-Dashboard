@@ -1,6 +1,7 @@
 
 .nav-container {
-  @include flexContainer($just: space-around);
+  @include flexContainer($just: space-around,
+                         $wrap: wrap);
   @include mq($breakpoint-md) {
     @include flexContainer($dir: column,
                            $just: center,)
@@ -8,11 +9,11 @@
 }
 
 .nav-icon {
-  height: 30px;
+  height: 20px;
 }
 
 .nav-a {
-  height: 30px;
+  height: 20px;
   margin: 9px 0;
   @include mq($breakpoint-md) {
     margin: 9px auto;

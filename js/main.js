@@ -1,5 +1,15 @@
 console.log('hello world');
 
+// DASHBOARD ALERT =============================================================
+
+let alert = document.getElementById('alert');
+
+  alert.innerHTML = "<div class='alert-banner'><p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p><p class='alert-banner-close'>X</p></div>"
+
+
+
+
+
 // Line Chart ==================================================================
 
 let trafficCanvas = document.getElementById('traffic-chart');

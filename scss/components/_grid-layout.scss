@@ -1,20 +1,20 @@
 
+// MAIN LAYOUT STYLE FOR PAGE ==================================================
+
+// MAIN GRID LAYOUT FOR HEADER/NAV/MAIN
 #grid-container {
-  display: grid;
-  grid-template-columns: 60px auto;
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "header header"
-    "nav nav"
-    "main main";
+
+
     @include mq($breakpoint-md) {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto;
       grid-template-areas:
         "header header"
         "nav main"
         "nav main";
     }
 }
-
 
 header {
   grid-area: header;
@@ -35,7 +35,7 @@ main {
       grid-row-start: 2;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: minmax(100px, auto);
+      grid-auto-rows: auto;
       grid-template-areas:
         "dashboard dashboard"
         "traffic traffic"

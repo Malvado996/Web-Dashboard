@@ -11,6 +11,7 @@
 }
 
 .header-title {
+  font-size: 20px;
   margin: 3px auto;
   @include mq($breakpoint-sm) {
     margin: 3px 0;
