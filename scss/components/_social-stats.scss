@@ -10,16 +10,16 @@
 }
 
 .social-container {
-  width: 232px;
-  height: 119px;
+  width: $social-container-width;
+  height: $social-container-height;
   @include flexContainer ($dir: row,
                           $alignItem: center);
 }
 
 // DIV THAT CONTAINS .SOCIAL-ICON SVG
 .social-image {
-  height: 70px;
-  width: 70px;
+  height: $social-image-size;
+  width: $social-image-size;
   margin: 0 15px;
   border-radius: 50%;
   background-color: yellow;
@@ -28,8 +28,8 @@
 }
 
 .social-icon {
-  height: $socialIconSize-sm;
-  width: $socialIconSize-sm;
+  height: $social-icon-size;
+  width: $social-icon-size;
 }
 
 .social-text {

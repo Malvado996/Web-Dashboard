@@ -287,7 +287,7 @@ main {
 
 .profile-pic {
   border-radius: 50%;
-  max-height: 39px;
+  height: 39px;
   margin: 9px; }
 
 .profile-name {
@@ -382,7 +382,7 @@ main {
 
 .widget-container-mobile {
   margin: 0 auto;
-  width: 50vw; }
+  width: 70vw; }
   @media (min-width: 768px) {
     .widget-container-mobile {
       width: 30vw; } }
@@ -420,11 +420,6 @@ main {
 .social-text {
   margin: 0 auto; }
 
-.member-image {
-  height: 61px;
-  margin: 0 8px;
-  border-radius: 5px; }
-
 .members-container {
   margin: 16px 0;
   max-width: 323px;
@@ -432,6 +427,11 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center; }
+
+.member-image {
+  height: 61px;
+  margin: 0 8px;
+  border-radius: 5px; }
 
 .members-container p {
   margin: 0 auto; }
@@ -456,6 +456,9 @@ main {
   margin: 0 auto;
   display: flex;
   flex-direction: column; }
+
+.easy-autocomplete {
+  margin: 0 auto; }
 
 .message-search {
   width: 200px;

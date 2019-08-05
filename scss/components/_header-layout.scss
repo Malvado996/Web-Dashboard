@@ -11,7 +11,7 @@
 }
 
 .header-title {
-  font-size: 20px;
+  font-size: $header-title-font-size;
   margin: 3px auto;
   @include mq($breakpoint-sm) {
     margin: 3px 0;
@@ -36,7 +36,7 @@
 }
 
     .bell-icon {
-      height: 20px;
+      height: $bell-icon-height;
       margin: 0 3px;
     }
 
@@ -46,8 +46,8 @@
       left: -9px;
       border-radius: 50%;
       background-color: white;
-      height: 6px;
-      width: 6px;
+      height: $notification-alarm-size;
+      width: $notification-alarm-size;
     }
 
 // PROFILE PIC/NAME CONTAINER
@@ -58,7 +58,7 @@
 
     .profile-pic {
       border-radius: 50%;
-      max-height: 39px;
+      height: $profile-pic-height;
       margin: 9px;
     }
 

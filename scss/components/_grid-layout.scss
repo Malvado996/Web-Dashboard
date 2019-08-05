@@ -18,19 +18,19 @@
 
 header {
   grid-area: header;
-  background-color: green;
+  background-color: $header-background-color;
 }
 
 nav {
   grid-area: nav;
-  background-color: yellow;
+  background-color: $nav-background-color;
 }
 
 main {
   grid-area: main;
   grid-row-start: 3;
   grid-row-end: -1;
-  background-color: red;
+  background-color: $main-background-color;
     @include mq($breakpoint-md) {
       grid-row-start: 2;
       display: grid;

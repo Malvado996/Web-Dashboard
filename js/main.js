@@ -1,16 +1,67 @@
 console.log('hello world');
 
+// AUTOCOMPLETE ================================================================
+
+//  vader, rufus, snickers, bandit,
+let options = {
+	data: ["Vader", "Rufus", "Snickers", "Bandit",]
+};
+
+$("#userField").easyAutocomplete(options);
+
+// LOCAL STORAGE ===============================================================
+
+const emailNotifications = document.getElementById('emailNotifications');
+const publicProfile = document.getElementById('publicProfile');
+const timeZone = document.getElementById('timeZone');
+const settingsSave = document.getElementById('settingsSave');
+const settingsCancel = document.getElementById('settingsCancel');
+
+const saveSetting = function() {
+  localStorage.setItem('emailNotifications', emailNotifications.checked);
+  localStorage.setItem('publicProfile', publicProfile.checked);
+  localStorage.setItem('timeZone', timeZone.value);
+}
+
+let storedEmail = localStorage.getItem('emailNotifications', emailNotifications.checked);
+let storedPublicProfile = localStorage.getItem('publicProfile', publicProfile.checked);
+let storedTimeZone = localStorage.getItem('timeZone', timeZone.value);
+
+
+document.addEventListener('DOMContentLoaded', ()=> {
+  emailNotifications.checked = (storedEmail === 'true');
+  publicProfile.checked = (storedPublicProfile === 'true');
+  timeZone.value = storedTimeZone;
+})
+
+settingsSave.addEventListener('click', ()=> {
+  saveSetting();
+  window.alert('Settings Saved');
+})
+
+settingsCancel.addEventListener('click', ()=> {
+  emailNotifications.checked = false;
+  publicProfile.checked = false;
+  timeZone.value = "Select a Timezone";
+  saveSetting();
+  window.alert('Settings Cancelled');
+})
+
 // DASHBOARD ALERT =============================================================
 
 let alert = document.getElementById('alert');
 
-  alert.innerHTML = "<div class='alert-banner'><p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p><p class='alert-banner-close'>X</p></div>"
+alert.innerHTML = "<div class='alert-banner'><p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p><p class='alert-banner-close'>X</p></div>"
 
-
-
-
+alert.addEventListener('click', e => {
+  const element = e.target;
+  if (element.classList.contains("alert-banner-close")) {
+    alert.style.display = "none"
+  }
+})
 
 // Line Chart ==================================================================
+
 
 let trafficCanvas = document.getElementById('traffic-chart');
 
@@ -30,18 +81,18 @@ let trafficData = {
   ],
   datasets: [{
     data: [
-      750,
-      1250,
-      1000,
-      2000,
-      1500,
-      1750,
-      1250,
-      1850,
-      2250,
-      1500,
-      2500
-    ],
+       750,
+       1250,
+       1000,
+       2000,
+       1500,
+       1750,
+       1250,
+       1850,
+       2250,
+       1500,
+       2500
+     ],
     backgroundColor: 'rgba(116, 119, 191, .3)',
     borderWidth: 1,
   }]
@@ -69,6 +120,76 @@ let trafficChart = new Chart(trafficCanvas, {
   data: trafficData,
   options: trafficOptions
 });
+
+// LINE CHART NAVIGATION
+
+const nav = document.getElementById('traffic-navigation')
+
+nav.addEventListener('click', () => {
+  let removeActive = document.getElementsByClassName('active');
+  let target = event.target;
+  removeActive[0].classList.remove('active');
+  target.classList.add('active');
+
+  if (target.innerText === "Hourly") {
+    trafficData.datasets[0].data = [
+      83,
+      52,
+      41,
+      31,
+      112,
+      72,
+      52,
+      77,
+      37,
+      62,
+      104
+    ];
+  } else if (target.innerText === "Daily") {
+    trafficData.datasets[0].data = [
+      362,
+      312,
+      250,
+      650,
+      375,
+      437,
+      600,
+      675,
+      562,
+      375,
+      625
+    ];
+  } else if (target.innerText === "Weekly") {
+    trafficData.datasets[0].data = [
+      750,
+      1250,
+      1000,
+      2000,
+      1500,
+      1750,
+      1250,
+      1850,
+      2250,
+      1500,
+      2500
+    ];
+  } else if (target.innerText === "Monthly") {
+    trafficData.datasets[0].data = [
+      30000,
+      15000,
+      12000,
+      24000,
+      27000,
+      21000,
+      15000,
+      22200,
+      18000,
+      18000,
+      9000
+    ];
+  }
+  trafficChart.update();
+})
 
 // Daily Traffic Bar Chart =====================================================
 
@@ -135,4 +256,27 @@ let mobileChart = new Chart(mobileCanvas, {
   type: 'doughnut',
   data: mobileData,
   options: mobileOptions,
+});
+
+// MESSAGES JS =================================================================
+
+const user = document.getElementById('userField');
+const message = document.getElementById('messageField');
+const send = document.getElementById('send');
+
+user.value = "";
+message.value = "";
+
+
+send.addEventListener ('click', () => {
+  event.preventDefault();
+  if (user.value === "" && message.value === "") {
+    window.alert("Please fill out user and message fields before sending");
+  } else if (user.value === "") {
+    window.alert("Please fill out user field before sending");
+  } else if (message.value === "") {
+    window.alert ("Please fill out message field before sending");
+  } else {
+    window.alert(`Message succesfully sent to: ${user.value}`);
+  }
 });

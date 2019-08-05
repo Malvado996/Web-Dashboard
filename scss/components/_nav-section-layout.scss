@@ -9,11 +9,11 @@
 }
 
 .nav-icon {
-  height: 20px;
+  height: $nav-icon-height;
 }
 
 .nav-a {
-  height: 20px;
+  height: $nav-icon-height;
   margin: 9px 0;
   @include mq($breakpoint-md) {
     margin: 9px auto;

@@ -1,4 +1,67 @@
 
+$body-font-size-sm    : 12.8px;
+
+// HEADER SECTION ==============================================================
+
+$header-title-font-size     : 20px;
+$bell-icon-height           : 20px;
+$notification-alarm-size    : 6px;
+$profile-pic-height         : 39px;
+
+// NAV SECTION =================================================================
+
+$nav-icon-height      : 20px; // sets height for both nav-icon and nav-a ***
+
+// MAIN SECTION ================================================================
+
+$dash-title-font-size     : 16px;
+$searbar-width            : 130px;
+$alert-banner-width       : 97%;
+
+// CHART SIZING
+
+$traffic-chart-width        : 90vw;
+
+$daily-chart-width          : 80vw;
+$daily-chart-width-sm       : 0;
+$daily-chart-width-md       : 45vw;
+$daily-chart-width-lg       : 0;
+
+$mobile-chart-width         : 70vw;
+$mobile-chart-width-sm      : 0;
+$mobile-chart-width-md      : 30vw;
+$mobile-chart-width-lg      : 0;
+
+// SOCIAL STATS SIZING =========================================================
+
+$social-container-width     : 232px;
+$social-container-height    : 119px;
+
+$social-image-size          : 70px;
+
+$social-icon-size           : 30px;
+
+// MEMBERS/ACTIVITIES SIZING ===================================================
+
+$member-activity-container-width      : 323px; //sets height for both members and activities containers
+$member-image-height                  : 61px;
+
+// MESSAGES/SETTINGS SIZING ====================================================
+
+$message-container-width      : 90%;
+$message-search-width         : 200px;
+$form-area-height             : 100px;
+$form-area-width              : 200px;
+$message-button-width         : 75px;
+
+
+
+
+
+$header-background-color      : green;
+$nav-background-color         : yellow;
+$main-background-color        : red;
+
 // TYPOGRAPHY SCALE 16PX BASE
 //
 // 1em       : 16px
@@ -31,8 +94,3 @@ $dashboard: (
   search: lighten($dashboard-header, 10%),
   alert: darken($dashboard-header, 10%),
 );
-
-
-$socialIconSize-sm    : 30px;
-$socialIconSize-md    : 60px;
-$socialIconSize-lg    : 70px;

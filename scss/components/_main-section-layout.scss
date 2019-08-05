@@ -12,7 +12,7 @@
 }
 
 .dash-title h2 {
-  font-size: 16px;
+  font-size: $dash-title-font-size;
   padding: 0 9px;
 }
 
@@ -23,14 +23,14 @@
 }
 
 .searchbar {
-  width: 130px;
+  width: $searbar-width;
   border-radius: 5px;
   margin: auto 6px auto 6px;
 }
 
 .alert-banner {
   display: none;
-  width: 97%;
+  width: $alert-banner-width;
   margin: 13px auto;
   border-radius: 6px;
   background-color: map-get($dashboard, alert);
@@ -69,23 +69,23 @@
 // LINE CHART ==================================================================
 .widget-container-traffic {
   margin: 0 auto;
-  width: 90vw;
+  width: $traffic-chart-width;
 }
 
 // DAILY CHART =================================================================
 .widget-container-daily {
   margin: 0 auto;
-  width: 80vw;
+  width: $daily-chart-width;
   @include mq($breakpoint-md) {
-    width: 45vw;
+    width: $daily-chart-width-md;
     }
 }
 
 // MOBILE CHART ================================================================
 .widget-container-mobile {
   margin: 0 auto;
-  width: 50vw;
+  width: $mobile-chart-width;
   @include mq($breakpoint-md) {
-    width: 30vw;
+    width: $mobile-chart-width-md;
     }
 }

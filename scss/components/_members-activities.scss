@@ -1,16 +1,16 @@
 
-.member-image {
-  height: 61px;
-  margin: 0 8px;
-  border-radius: 5px;
-}
-
 .members-container {
   margin: 16px 0;
-  max-width: 323px;
+  max-width: $member-activity-container-width;
   @include flexContainer($dir: row,
                          $wrap: wrap,
                          $alignItem: center)
+}
+
+.member-image {
+  height: $member-image-height;
+  margin: 0 8px;
+  border-radius: 5px;
 }
 
 .members-container p {
@@ -24,7 +24,7 @@
 
 .recent-activities-container {
   margin: 16px 0;
-  width: 323px;
+  width: $member-activity-container-width;
   @include flexContainer($dir: row,
                          $wrap: wrap,
                          $alignItem: center)

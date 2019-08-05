@@ -1,19 +1,23 @@
 
 // ELEMENTS FOR MESSAGES SECTION -----------------------------------------------
 .message-container {
-  width: 90%;
+  width: $message-container-width;
   margin: 0 auto;
   @include flexContainer($dir: column,)
 }
 
+.easy-autocomplete{
+  margin: 0 auto;
+}
+
 .message-search {
-  width: 200px;
+  width: $message-search-width;
   margin: 6px auto;
 }
 
 .form-area {
-  height: 100px;
-  width: 200px;
+  height: $form-area-height;
+  width: $form-area-width;
   margin: 0 auto;
 }
 
