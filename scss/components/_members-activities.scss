@@ -1,3 +1,15 @@
+// MEMBERS SECTION =============================================================
+
+.members {
+  @include mq($breakpoint-sm) {
+    max-width: 325px;
+    margin: 0 auto;
+  }
+  @include mq($breakpoint-md) {
+    max-width: none;
+    margin: 0 0;
+  }
+}
 
 .members-container {
   margin: 16px 0;
@@ -21,6 +33,18 @@
   }
 }
 
+// RECENT ACTIVITIES ===========================================================
+
+.recent-activities {
+  @include mq($breakpoint-sm) {
+    max-width: 325px;
+    margin: 0 auto;
+  }
+  @include mq($breakpoint-md) {
+    max-width: none;
+    margin: 0 0;
+  }
+}
 
 .recent-activities-container {
   margin: 16px 0;

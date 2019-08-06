@@ -178,7 +178,15 @@ th {
   padding: 0; }
 
 body {
-  font-size: 12.8px; }
+  font-size: 0.815em; }
+  @media (min-width: 768px) {
+    body {
+      font-size: 1em; } }
+
+h4 {
+  font-size: 1em;
+  margin: 0.642em;
+  text-transform: uppercase; }
 
 @media (min-width: 768px) {
   #grid-container {
@@ -247,11 +255,12 @@ main {
       justify-content: space-between; } }
 
 .header-title {
-  font-size: 20px;
-  margin: 3px auto; }
+  font-size: 1.25em;
+  margin: 0.512em auto 0.21em; }
   @media (min-width: 320px) {
     .header-title {
-      margin: 3px 0; } }
+      font-size: 1.953em;
+      margin: 0 0 0 0.328em; } }
 
 .header-info {
   display: flex;
@@ -268,17 +277,17 @@ main {
   flex-direction: row; }
 
 .bell-icon {
-  height: 20px;
-  margin: 0 3px; }
+  height: 1.25em;
+  margin: 0 0.21em; }
 
 #notifications {
   position: relative;
-  top: -7px;
-  left: -9px;
+  top: -3px;
+  left: -5px;
   border-radius: 50%;
   background-color: white;
-  height: 6px;
-  width: 6px; }
+  height: 0.441em;
+  width: 0.441em; }
 
 .profile-container {
   display: flex;
@@ -287,7 +296,7 @@ main {
 
 .profile-pic {
   border-radius: 50%;
-  height: 39px;
+  height: 1.953em;
   margin: 9px; }
 
 .profile-name {
@@ -304,14 +313,20 @@ main {
       justify-content: center; } }
 
 .nav-icon {
-  height: 20px; }
+  height: 1.25em; }
+  @media (min-width: 320px) {
+    .nav-icon {
+      height: 1.953em; } }
 
 .nav-a {
-  height: 20px;
-  margin: 9px 0; }
+  height: 1.25em;
+  margin: 0.512em; }
+  @media (min-width: 320px) {
+    .nav-a {
+      height: 1.953em; } }
   @media (min-width: 768px) {
     .nav-a {
-      margin: 9px auto; } }
+      margin: 1.563em auto; } }
 
 .dash-title-search-container {
   display: flex;
@@ -324,7 +339,7 @@ main {
   background-color: blue; }
 
 .dash-title h2 {
-  font-size: 16px;
+  font-size: 1em;
   padding: 0 9px; }
 
 .search {
@@ -333,7 +348,7 @@ main {
   background-color: #3333ff; }
 
 .searchbar {
-  width: 130px;
+  width: 11.642em;
   border-radius: 5px;
   margin: auto 6px auto 6px; }
 
@@ -378,14 +393,14 @@ main {
   width: 80vw; }
   @media (min-width: 768px) {
     .widget-container-daily {
-      width: 45vw; } }
+      width: 42vw; } }
 
 .widget-container-mobile {
   margin: 0 auto;
-  width: 70vw; }
+  width: 80vw; }
   @media (min-width: 768px) {
     .widget-container-mobile {
-      width: 30vw; } }
+      width: 42vw; } }
 
 .social-wrapper {
   display: flex;
@@ -399,6 +414,7 @@ main {
 .social-container {
   width: 232px;
   height: 119px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center; }
@@ -420,6 +436,15 @@ main {
 .social-text {
   margin: 0 auto; }
 
+@media (min-width: 320px) {
+  .members {
+    max-width: 325px;
+    margin: 0 auto; } }
+@media (min-width: 768px) {
+  .members {
+    max-width: none;
+    margin: 0 0; } }
+
 .members-container {
   margin: 16px 0;
   max-width: 323px;
@@ -440,6 +465,15 @@ main {
       margin-left: auto;
       margin-right: 0; } }
 
+@media (min-width: 320px) {
+  .recent-activities {
+    max-width: 325px;
+    margin: 0 auto; } }
+@media (min-width: 768px) {
+  .recent-activities {
+    max-width: none;
+    margin: 0 0; } }
+
 .recent-activities-container {
   margin: 16px 0;
   width: 323px;
@@ -450,6 +484,15 @@ main {
 
 .recent-activities-text p {
   margin: 0 0 6px 0; }
+
+@media (min-width: 320px) {
+  .message-users {
+    max-width: 325px;
+    margin: 0 auto; } }
+@media (min-width: 768px) {
+  .message-users {
+    max-width: none;
+    margin: 0 0; } }
 
 .message-container {
   width: 90%;
@@ -466,27 +509,38 @@ main {
 
 .form-area {
   height: 100px;
-  width: 200px;
-  margin: 0 auto; }
+  width: 225px;
+  margin: 0 auto;
+  border-radius: .328em; }
 
 .message-button {
   width: 75px;
   margin: 6px auto;
-  border-radius: 3px; }
+  border-radius: .328em; }
+
+@media (min-width: 320px) {
+  .settings {
+    max-width: 325px;
+    margin: 0 auto; } }
+@media (min-width: 768px) {
+  .settings {
+    max-width: none;
+    margin: 0 0; } }
 
 .email-toggle-container {
-  margin-bottom: 9px;
+  margin: 0 0 0 0;
   display: flex;
   flex-direction: row;
   align-items: center; }
 
 .public-toggle-container {
+  margin: 0 0 0 0;
   display: flex;
   flex-direction: row;
   align-items: center; }
 
 .toggle {
-  width: 75px;
+  width: 4.768em;
   margin: auto auto; }
 
 .timezone-container {
@@ -496,7 +550,8 @@ main {
 
 .timezone-field {
   margin: 10px auto;
-  width: 200px; }
+  width: 200px;
+  border-radius: .328em; }
 
 .settings-button-container {
   width: 130px;
@@ -505,12 +560,14 @@ main {
   justify-content: space-around; }
 
 .button-primary, .button-disabled {
-  width: 58.25px; }
+  width: 4.768em;
+  margin: 0 .441em;
+  border-radius: .328em; }
 
 .settings-text {
   width: 175px;
   padding-left: 6px;
-  font-size: 12px;
+  font-size: 0.815em;
   text-transform: uppercase; }
 
 /*# sourceMappingURL=styles.css.map */

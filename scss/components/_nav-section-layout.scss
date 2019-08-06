@@ -10,12 +10,18 @@
 
 .nav-icon {
   height: $nav-icon-height;
+  @include mq($breakpoint-sm) {
+    height: $nav-icon-height__sm;
+  }
 }
 
 .nav-a {
   height: $nav-icon-height;
-  margin: 9px 0;
+  margin: $nav-icon__margin;
+  @include mq($breakpoint-sm) {
+    height: $nav-icon-height__sm;
+  }
   @include mq($breakpoint-md) {
-    margin: 9px auto;
+    margin: 1.563em auto;
   }
 }

@@ -12,9 +12,10 @@
 
 .header-title {
   font-size: $header-title-font-size;
-  margin: 3px auto;
+  margin: $header-title__margin;
   @include mq($breakpoint-sm) {
-    margin: 3px 0;
+    font-size: $header-title__font-size-sm;
+    margin: $header-title__margin-sm;
   }
 }
 
@@ -23,7 +24,7 @@
   @include flexContainer ($dir: row,
                           $alignItem: center,
                           $just: flex-end) {
-    margin: 0 auto;
+    margin: $header-info__margin;
   }
   @include mq($breakpoint-sm) {
     margin: 0 12px;
@@ -37,13 +38,13 @@
 
     .bell-icon {
       height: $bell-icon-height;
-      margin: 0 3px;
+      margin: $bell-icon__margin;
     }
 
     #notifications {
       position: relative;
-      top: -7px;
-      left: -9px;
+      top: -3px;
+      left: -5px;
       border-radius: 50%;
       background-color: white;
       height: $notification-alarm-size;

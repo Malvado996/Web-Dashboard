@@ -1,4 +1,13 @@
 
 body {
   font-size: $body-font-size-sm;
+  @include mq($breakpoint-md) {
+    font-size: $body-font-size-md;
+  }
+}
+
+h4 {
+  font-size: $h4-font-size;
+  margin: $h4-margin;
+  text-transform: uppercase;
 }

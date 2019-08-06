@@ -12,6 +12,7 @@
 .social-container {
   width: $social-container-width;
   height: $social-container-height;
+  margin: 0 auto;
   @include flexContainer ($dir: row,
                           $alignItem: center);
 }

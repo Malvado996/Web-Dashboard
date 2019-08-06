@@ -1,5 +1,17 @@
 
 // ELEMENTS FOR MESSAGES SECTION -----------------------------------------------
+
+.message-users {
+  @include mq($breakpoint-sm) {
+    max-width: 325px;
+    margin: 0 auto;
+  }
+  @include mq($breakpoint-md) {
+    max-width: none;
+    margin: 0 0;
+  }
+}
+
 .message-container {
   width: $message-container-width;
   margin: 0 auto;
@@ -7,7 +19,7 @@
 }
 
 .easy-autocomplete{
-  margin: 0 auto;
+  margin: $easy-autocomplete__margin;
 }
 
 .message-search {
@@ -19,26 +31,40 @@
   height: $form-area-height;
   width: $form-area-width;
   margin: 0 auto;
+  border-radius: .328em;
 }
 
 .message-button {
   width: 75px;
   margin: 6px auto;
-  border-radius: 3px;
+  border-radius: .328em;
 }
 
 // ELEMENTS FOR SETTINGS SECTION -----------------------------------------------
+
+.settings {
+  @include mq($breakpoint-sm) {
+    max-width: 325px;
+    margin: 0 auto;
+  }
+  @include mq($breakpoint-md) {
+    max-width: none;
+    margin: 0 0;
+  }
+}
+
 .email-toggle-container {
-  margin-bottom: 9px;
+  margin: $email-toggle-container__margin;
   @include flexContainer ($dir: row, $alignItem: center)
 }
 
 .public-toggle-container {
+  margin: $public-toggle-container__margin;
   @include flexContainer ($dir: row, $alignItem: center)
 }
 
 .toggle {
-  width: 75px;
+  width: $toggle__width;
   margin: auto auto;
 }
 
@@ -49,6 +75,7 @@
 .timezone-field {
   margin: 10px auto;
   width: 200px;
+  border-radius: .328em;
 }
 
 .settings-button-container {
@@ -58,12 +85,14 @@
 }
 
 .button-primary, .button-disabled {
-  width: 58.25px;
+  width: 4.768em;
+  margin: 0 .441em;
+  border-radius: .328em;
 }
 
 .settings-text {
   width: 175px;
   padding-left: 6px;
-  font-size: 12px;
+  font-size: $settings-text__font-size;
   text-transform: uppercase;
 }
