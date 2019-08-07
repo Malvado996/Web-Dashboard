@@ -9,6 +9,7 @@
   @include mq($breakpoint-md) {
     max-width: none;
     margin: 0 0;
+    border-top: 2px solid $border-color;
   }
 }
 
@@ -24,19 +25,21 @@
 
 .message-search {
   width: $message-search-width;
-  margin: 6px auto;
 }
 
 .form-area {
   height: $form-area-height;
   width: $form-area-width;
-  margin: 0 auto;
+  margin: .441em auto 0;
+  border: 2px solid $border-color;
   border-radius: .328em;
 }
 
 .message-button {
-  width: 75px;
-  margin: 6px auto;
+  width: $message-button-width;
+  margin: .441em auto 1.563em;
+  color: #ebebeb;
+  background-color: $saveBttn-color;
   border-radius: .328em;
 }
 
@@ -50,6 +53,8 @@
   @include mq($breakpoint-md) {
     max-width: none;
     margin: 0 0;
+    border-top: 2px solid $border-color;
+    border-left: 2px solid $border-color;
   }
 }
 
@@ -73,25 +78,27 @@
 }
 
 .timezone-field {
-  margin: 10px auto;
+  margin: .441em auto 0;
   width: 200px;
   border-radius: .328em;
 }
 
 .settings-button-container {
-  width: 130px;
-  margin: 6px auto 16px;
+  width: 200px;
+  margin: .441em auto 1em;
   @include flexContainer ($just: space-around)
 }
 
-.button-primary, .button-disabled {
-  width: 4.768em;
-  margin: 0 .441em;
-  border-radius: .328em;
+.button-primary{
+  @include bttn($saveBttn-color);
+}
+
+.button-disabled {
+  @include bttn($cancelBttn-color);
 }
 
 .settings-text {
-  width: 175px;
+  width: $settings-text__width;
   padding-left: 6px;
   font-size: $settings-text__font-size;
   text-transform: uppercase;

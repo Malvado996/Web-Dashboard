@@ -5,6 +5,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dog App Dashboard</title>
   <link rel="stylesheet" href="css/easy-autocomplete.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
   <link rel="stylesheet" href="css/styles.css">
@@ -15,16 +16,16 @@
 
   <div id="grid-container">
 
-  <!-- HEADER ------------------------------------------------------------------>
+  <!-- HEADER =================================================================-->
   <header>
 
     <div class="header-container">
 
-      <h1 class="header-title">Header</h1>
+      <h1 class="header-title">DOG-app &copy;</h1>
 
         <div class="header-info">
           <div class="bell-container">
-              <img class="bell-icon" src="icons/icon-bell.svg" alt="Bell Icon">
+              <img class="bell-icon" id="bell" src="icons/icon-bell.svg" alt="Bell Icon">
 
               <div id="notifications">
               <!-- INSERT JS -->
@@ -32,7 +33,7 @@
           </div>
 
           <div class="profile-container">
-              <img class="profile-pic" src="images/userDog.jpeg">
+              <img class="profile-pic" src="images/bubby.jpg" alt="user pic">
 
               <p class="profile-name">User Dog</p>
           </div>
@@ -42,33 +43,33 @@
 
   </header>
 
-  <!-- NAVIGATION -------------------------------------------------------------->
+  <!-- NAVIGATION =================================================================-->
   <nav>
 
     <div class="nav-container">
-        <a class="nav-a" href="">
-          <img class="nav-icon" src="icons/icon-dashboard.svg">
+        <a class="nav-a" href="#traffic">
+          <img class="nav-icon" src="icons/icon-dashboard.svg" alt="nav icon">
         </a>
 
-        <a class="nav-a" href="">
-          <img class="nav-icon" src="icons/icon-visits.svg">
+        <a class="nav-a" href="#social-stats">
+          <img class="nav-icon" src="icons/icon-visits.svg" alt="nav icon">
         </a>
 
-        <a class="nav-a" href="">
-          <img class="nav-icon" src="icons/icon-members.svg">
+        <a class="nav-a" href="#members">
+          <img class="nav-icon" src="icons/icon-members.svg" alt="nav icon">
         </a>
 
-        <a class="nav-a" href="">
-          <img class="nav-icon" src="icons/icon-settings.svg">
+        <a class="nav-a" href="#settings">
+          <img class="nav-icon" src="icons/icon-settings.svg" alt="nav icon">
         </a>
     </div>
 
   </nav>
 
-  <!-- MAIN SECTION ----------------------------------------------------------->
+  <!-- MAIN SECTION =================================================================-->
   <main>
 
-    <!-- DASHBOARD AREA ------------------------------------------------------->
+    <!-- DASHBOARD AREA =================================================================-->
     <section class="dashboard">
 
       <div class="dash-title-search-container">
@@ -88,7 +89,7 @@
     </section>
 
     <!-- Line Chart and Line Chart Nav -->
-    <section class="traffic">
+    <section class="traffic" id="traffic">
 
       <div class="traffic-header">
 
@@ -131,18 +132,14 @@
 
     </section>
 
-    <!-- SOCIAL STATS --------------------------------------------------------->
-    <section class="social-stats">
+    <!-- SOCIAL STATS =================================================================-->
+    <section class="social-stats" id="social-stats">
       <h4>social-stats</h4>
 
       <div class="social-wrapper">
           <div class="social-container">
             <div class="social-image">
               <svg class="social-icon"
-                   version="1.1"
-                   id="Layer_1"
-                   xmlns="http://www.w3.org/2000/svg"
-                   xmlns:xlink="http://www.w3.org/1999/xlink"
                    x="0px"
                    y="0px"
               	   viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -164,7 +161,6 @@
               <svg class="social-icon"
                    enable-background="new 0 0 56.693 56.693"
                    height="56.693px"
-                   id="Layer_1"
                    version="1.1"
                    viewBox="0 0 56.693 56.693"
                    width="56.693px"
@@ -187,7 +183,6 @@
             <div class="social-image">
               <svg class="social-icon"
                    version="1.1"
-                   id="Layer_1"
                    xmlns="http://www.w3.org/2000/svg"
                    xmlns:xlink="http://www.w3.org/1999/xlink"
                    x="0px"
@@ -224,93 +219,102 @@
     </section>
 
 
-    <!-- NEW MEMBERS AREA ----------------------------------------------------->
-    <section class="members">
+    <!-- NEW MEMBERS AREA =================================================================-->
+    <section class="members" id="members">
 
       <h4>new members</h4>
 
-      <div class="members-container">
-        <img src="images/dog1.jpeg" class="member-image">
-        <div class="members-text">
-          <p>1111111</p>
-          <a href="#">******@example.com</a>
-        </div>
-        <p>00/00/0000</p>
-      </div>
 
-      <div class="members-container">
-        <img src="images/dog2.jpg" class="member-image">
-        <div class="members-text">
-          <p>222222</p>
-          <a href="#">******@example.com</a>
-        </div>
-        <p>00/00/0000</p>
-      </div>
+          <div class="members-container">
+            <img src="images/dog1.jpeg" class="member-image" alt="member pic">
+            <div class="members-text">
+              <p><strong>Vader</strong></p>
+              <a href="#">vader.dog@example.com</a>
+            </div>
+            <p class="members-date">12/25/2012</p>
+          </div>
 
-      <div class="members-container">
-        <img src="images/dog3.jpg" class="member-image">
-        <div class="members-text">
-          <p>333333</p>
-          <a href="#">******@example.com</a>
-        </div>
-        <p>00/00/0000</p>
-      </div>
+          <div class="members-container">
+            <img src="images/dog2.jpg" class="member-image" alt="member pic">
+            <div class="members-text">
+              <p><strong>Rufus</strong></p>
+              <a href="#">rufus.dog@example.com</a>
+            </div>
+            <p class="members-date">12/25/2012</p>
+          </div>
 
-      <div class="members-container">
-        <img src="images/dog4.jpg" class="member-image">
-        <div class="members-text">
-          <p>444444</p>
-          <a href="#">******@example.com</a>
-        </div>
-        <p>00/00/0000</p>
-      </div>
+          <div class="members-container">
+            <img src="images/dog3.jpg" class="member-image" alt="member pic">
+            <div class="members-text">
+              <p><strong>Snickers</strong></p>
+              <a href="#">snickers.dog@example.com</a>
+            </div>
+            <p class="members-date">12/25/2012</p>
+          </div>
+
+          <div class="members-container">
+            <img src="images/dog4.jpg" class="member-image" alt="member pic">
+            <div class="members-text">
+              <p><strong>Bandit</strong></p>
+              <a href="#">bandit.dog@example.com</a>
+            </div>
+            <p class="members-date">12/25/2012</p>
+          </div>
+
 
     </section>
 
-    <!-- RECENT ACTIVITIES SECTION --------------------------------------------->
+    <!-- RECENT ACTIVITIES SECTION =================================================================-->
     <section class="recent-activities">
 
       <h4>recent-activities</h4>
 
-      <div class="recent-activities-container">
-        <img src="images/dog1.jpeg" class="member-image">
-        <div class="recent-activities-text">
-          <p>aaaaaa</p>
-          <p>xxxxxx hours ago
-        </div>
-      </div>
 
-      <div class="recent-activities-container">
-        <img src="images/dog2.jpg" class="member-image">
-        <div class="recent-activities-text">
-          <p>aaaaaa</p>
-          <p>xxxxxx hours ago
-        </div>
-      </div>
+          <div class="recent-activities-container">
+            <img src="images/dog1.jpeg" class="member-image" alt="member pic">
+            <div class="recent-activities-text">
+              <p>Vader posted on the Emperor's timeline</p>
+              <p class="activities-time"><strong>5</strong> hours ago</p>
+            </div>
+            <p class="activities-arrow">></p>
+          </div>
 
-      <div class="recent-activities-container">
-        <img src="images/dog3.jpg" class="member-image">
-        <div class="recent-activities-text">
-          <p>aaaaaa</p>
-          <p>xxxxxx hours ago
-        </div>
-      </div>
+          <div class="recent-activities-container">
+            <img src="images/dog2.jpg" class="member-image" alt="member pic">
+            <div class="recent-activities-text">
+              <p>Rufus liked likes</p>
+              <p class="activities-time"><strong>4</strong> hours ago</p>
+            </div>
+            <p class="activities-arrow">></p>
+          </div>
 
-      <div class="recent-activities-container">
-        <img src="images/dog4.jpg" class="member-image">
-        <div class="recent-activities-text">
-          <p>aaaaaa</p>
-          <p>xxxxxx hours ago
-        </div>
-      </div>
+          <div class="recent-activities-container">
+            <img src="images/dog3.jpg" class="member-image" alt="member pic">
+            <div class="recent-activities-text">
+              <p>Snickers commented on Facebook</p>
+              <p class="activities-time"><strong>3</strong> hours ago</p>
+            </div>
+            <p class="activities-arrow">></p>
+          </div>
+
+          <div class="recent-activities-container">
+            <img src="images/dog4.jpg" class="member-image" alt="member pic">
+            <div class="recent-activities-text">
+              <p>Bandit stole your socks</p>
+              <p class="activities-time"><strong>2</strong> hours ago</p>
+            </div>
+            <p class="activities-arrow">></p>
+          </div>
+
 
     </section>
 
 
-    <!-- MESSAGE USERS SECTION ------------------------------------------------>
+    <!-- MESSAGE USERS SECTION =================================================================-->
     <section class="message-users">
 
       <h4>message-users</h4>
+
 
       <form class="message-container">
 
@@ -326,65 +330,66 @@
 
         </form>
 
+
     </section>
 
-    <!-- SETTINGS SECTION ------------------------------------------------------>
-    <section class="settings">
+    <!-- SETTINGS SECTION =================================================================-->
+    <section class="settings" id="settings">
 
       <h4>settings</h4>
 
-      <div class="email-toggle-container">
+          <div class="email-toggle-container">
 
-          <p class="settings-text">Send Email Notifications</p>
-          <!-- custom css toggle code -->
-          <label class="switch-light switch-ios toggle" onclick="">
-              <input type="checkbox" id="emailNotifications">
+              <p class="settings-text">Send Email Notifications</p>
+              <!-- custom css toggle code -->
+              <label class="switch-light switch-ios toggle" onclick="">
+                  <input type="checkbox" id="emailNotifications">
 
-              <span>
-                <span>Off</span>
-                <span>On</span>
-                <a></a>
-              </span>
-          </label>
+                  <span>
+                    <span>Off</span>
+                    <span>On</span>
+                    <a></a>
+                  </span>
+              </label>
 
-      </div>
-
-      <div class="public-toggle-container">
-
-          <p class="settings-text">Set Profile to Public</p>
-          <!-- custom css toggle code -->
-          <label class="switch-light switch-ios toggle" onclick="">
-              <input type="checkbox" id="publicProfile">
-
-              <span>
-                <span>Off</span>
-                <span>On</span>
-                <a></a>
-              </span>
-          </label>
-
-       </div>
-
-      <div class="timezone-container">
-          <select class="timezone-field" id="timeZone">
-            <option value="Select a Timezone">Select a Timezone</option>
-            <option value="Atlantis">Atlantis</option>
-            <option value="Westeros">Westeros</option>
-            <option value="Mordor">Mordor</option>
-            <option value="Narnia">Narnia</option>
-            <option value="Never Never Land">Never Never Land</option>
-          </select>
-
-          <div class="settings-button-container">
-            <button class="button-primary" id="settingsSave">Save</button>
-            <button class="button-disabled" id="settingsCancel">Cancel</button>
           </div>
-      </div>
+
+          <div class="public-toggle-container">
+
+              <p class="settings-text">Set Profile to Public</p>
+              <!-- custom css toggle code -->
+              <label class="switch-light switch-ios toggle" onclick="">
+                  <input type="checkbox" id="publicProfile">
+
+                  <span>
+                    <span>Off</span>
+                    <span>On</span>
+                    <a></a>
+                  </span>
+              </label>
+
+           </div>
+
+          <div class="timezone-container">
+              <select class="timezone-field" id="timeZone">
+                <option value="Select a Timezone">Select a Timezone</option>
+                <option value="Atlantis">Atlantis</option>
+                <option value="Westeros">Westeros</option>
+                <option value="Mordor">Mordor</option>
+                <option value="Narnia">Narnia</option>
+                <option value="Never Never Land">Never Never Land</option>
+              </select>
+
+              <div class="settings-button-container">
+                <button class="button-primary" id="settingsSave">Save</button>
+                <button class="button-disabled" id="settingsCancel">Cancel</button>
+              </div>
+          </div>
 
     </section>
 
   </main>
-</div> <!-- .grid-container div close ----------------------------------------->
+</div> <!-- .grid-container div close =================================================================-->
   <!-- javascript -->
   <!-- <script src="js/chart.js"></script> -->
   <script src="js/jquery-min.js"></script>

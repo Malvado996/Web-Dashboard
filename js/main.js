@@ -1,57 +1,21 @@
+
 console.log('hello world');
 
-// AUTOCOMPLETE ================================================================
+// BELL NOTIFICATIONS ==========================================================
+const bell = document.getElementById('bell');
+const notifications = document.getElementById('notifications');
 
-//  vader, rufus, snickers, bandit,
-let options = {
-	data: ["Vader", "Rufus", "Snickers", "Bandit",]
-};
-
-$("#userField").easyAutocomplete(options);
-
-// LOCAL STORAGE ===============================================================
-
-const emailNotifications = document.getElementById('emailNotifications');
-const publicProfile = document.getElementById('publicProfile');
-const timeZone = document.getElementById('timeZone');
-const settingsSave = document.getElementById('settingsSave');
-const settingsCancel = document.getElementById('settingsCancel');
-
-const saveSetting = function() {
-  localStorage.setItem('emailNotifications', emailNotifications.checked);
-  localStorage.setItem('publicProfile', publicProfile.checked);
-  localStorage.setItem('timeZone', timeZone.value);
-}
-
-let storedEmail = localStorage.getItem('emailNotifications', emailNotifications.checked);
-let storedPublicProfile = localStorage.getItem('publicProfile', publicProfile.checked);
-let storedTimeZone = localStorage.getItem('timeZone', timeZone.value);
-
-
-document.addEventListener('DOMContentLoaded', ()=> {
-  emailNotifications.checked = (storedEmail === 'true');
-  publicProfile.checked = (storedPublicProfile === 'true');
-  timeZone.value = storedTimeZone;
-})
-
-settingsSave.addEventListener('click', ()=> {
-  saveSetting();
-  window.alert('Settings Saved');
-})
-
-settingsCancel.addEventListener('click', ()=> {
-  emailNotifications.checked = false;
-  publicProfile.checked = false;
-  timeZone.value = "Select a Timezone";
-  saveSetting();
-  window.alert('Settings Cancelled');
-})
+bell.addEventListener ('click', ()=> {
+	window.alert("Q: What part of a house is a dog's favorite?");
+	window.alert('A: The woof!!!');
+	notifications.style.display = 'none';
+});
 
 // DASHBOARD ALERT =============================================================
 
 let alert = document.getElementById('alert');
 
-alert.innerHTML = "<div class='alert-banner'><p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p><p class='alert-banner-close'>X</p></div>"
+alert.innerHTML = "<div class='alert-banner'><p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p><p class='alert-banner-close'><strong>X</strong></p></div>"
 
 alert.addEventListener('click', e => {
   const element = e.target;
@@ -93,7 +57,7 @@ let trafficData = {
        1500,
        2500
      ],
-    backgroundColor: 'rgba(116, 119, 191, .3)',
+    backgroundColor: '#b6c649',
     borderWidth: 1,
   }]
 };
@@ -101,7 +65,7 @@ let trafficData = {
 let trafficOptions = {
   aspectRatio: 2.5,
   animation: {
-    duration: 0
+    duration: 1000
   },
   scales: {
     yAxes: [{
@@ -200,7 +164,7 @@ const dailyData = {
   datasets: [{
     label: '# of Hits',
     data: [75, 115, 175, 125, 225, 200, 100],
-    backgroundColor: '#7477bf',
+    backgroundColor: '#931f1d',
     borderWidth: 1
   }]
 };
@@ -235,9 +199,9 @@ const mobileData = {
     data: [2000, 550, 500,],
     borderWidth: 0,
     backgroundColor: [
-      '#7477bf',
-      '#78cf82',
-      '#51b6c8',
+      '#ffb30f',
+      '#2f97c1',
+      '#fd151b',
     ]
   }]
 };
@@ -280,3 +244,53 @@ send.addEventListener ('click', () => {
     window.alert(`Message succesfully sent to: ${user.value}`);
   }
 });
+
+// AUTOCOMPLETE ================================================================
+
+let options = {
+	data: ["vader.dog@example.com",
+				 "rufus.dog@example.com",
+				 "snickers.dog@example.com",
+				 "bandit.dog@example.com",
+			 ]
+};
+
+$("#userField").easyAutocomplete(options);
+
+// LOCAL STORAGE ===============================================================
+
+const emailNotifications = document.getElementById('emailNotifications');
+const publicProfile = document.getElementById('publicProfile');
+const timeZone = document.getElementById('timeZone');
+const settingsSave = document.getElementById('settingsSave');
+const settingsCancel = document.getElementById('settingsCancel');
+
+const saveSetting = function() {
+  localStorage.setItem('emailNotifications', emailNotifications.checked);
+  localStorage.setItem('publicProfile', publicProfile.checked);
+  localStorage.setItem('timeZone', timeZone.value);
+}
+
+let storedEmail = localStorage.getItem('emailNotifications', emailNotifications.checked);
+let storedPublicProfile = localStorage.getItem('publicProfile', publicProfile.checked);
+let storedTimeZone = localStorage.getItem('timeZone', timeZone.value);
+
+
+document.addEventListener('DOMContentLoaded', ()=> {
+  emailNotifications.checked = (storedEmail === 'true');
+  publicProfile.checked = (storedPublicProfile === 'true');
+  timeZone.value = storedTimeZone;
+})
+
+settingsSave.addEventListener('click', ()=> {
+  saveSetting();
+  window.alert('Settings Saved');
+})
+
+settingsCancel.addEventListener('click', ()=> {
+  emailNotifications.checked = false;
+  publicProfile.checked = false;
+  timeZone.value = "Select a Timezone";
+  saveSetting();
+  window.alert('Settings Cancelled');
+})

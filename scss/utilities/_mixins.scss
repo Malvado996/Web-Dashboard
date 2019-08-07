@@ -35,3 +35,11 @@
   flex-shrink: $shrink;
   @content;
 }
+
+@mixin bttn($color) {
+  width: 5.96em;
+  margin: 0.441em;
+  border-radius: .328em;
+  color: #ebebeb;
+  background-color: $color;
+}

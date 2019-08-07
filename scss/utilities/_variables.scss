@@ -30,10 +30,11 @@
 
 // BASE ELEMENTS ===============================================================
 
-$body-font-size-sm    : .815em;
-$body-font-size-md    : 1em;
-$h4-font-size         : 1em;
-$h4-margin            : .642em;
+$body-font-size-sm       : .815em;
+$body-font-size-lg       : 1em;
+$h4-font-size            : 1em;
+$h4-font__size--md       : 1.25em;
+$h4-margin               : 1.953em .642em;
 
 // HEADER SECTION ==============================================================
 
@@ -43,9 +44,11 @@ $header-title__font-size-sm : 1.953em;
 $header-title__margin-sm    : 0 0 0 .328em;
 $header-info__margin        : 0 auto; // flex container for bell, pic, and name
 $bell-icon-height           : 1.25em;
-$bell-icon__margin          : 0 .21em;
-$notification-alarm-size    : .441em;
+$bell-icon__height--md      : 1.953em;
+$bell-icon__margin          : 0 .441em;
+$notification-alarm-size    : .512em;
 $profile-pic-height         : 1.953em;
+$profile-pic__height-sm     : 3.815em;
 
 // NAV SECTION =================================================================
 
@@ -55,9 +58,12 @@ $nav-icon__margin     : .512em;
 
 // MAIN SECTION ================================================================
 
-$dash-title-font-size     : 1em;
-$searbar-width            : 11.642em;
-$alert-banner-width       : 97%;
+$dash-title-font-size       : 1em;
+$dash-title__font-size--md  : 1.563em;
+$searbar-width              : 11.642em;
+$searchbar__margin          : auto .815em;
+$alert-banner-width         : 93%;
+$alert-banner__width--lg    : 75%;
 
 // CHART SIZING
 
@@ -75,45 +81,64 @@ $mobile-chart-width-lg      : 0;
 
 // SOCIAL STATS SIZING =========================================================
 
-$social-container-width     : 232px;
-$social-container-height    : 119px;
+$social-container-width     : 14.552em;
+$social-container-height    : 7.451em;
 
-$social-image-size          : 70px;
-$social-icon-size           : 30px;
+$social-image-size          : 5.96em;
+$social-icon-size           : 3.052em;
 
 // MEMBERS/ACTIVITIES SIZING ===================================================
 
-$member-activity-container-width      : 323px; //sets height for both members and activities containers
-$member-image-height                  : 61px;
+$member-image-height                  : 4.768em;  // sets height for both member/activities
 
 // MESSAGES/SETTINGS SIZING ====================================================
 
 $message-container-width          : 90%;
-$message-search-width             : 200px;
-$easy-autocomplete__margin        : 0 auto;
-$form-area-height                 : 100px;
-$form-area-width                  : 225px;
-$message-button-width             : 4.768em;
+$message-search-width             : 17em;
+$easy-autocomplete__margin        : 0 auto .328em auto;
+$form-area-height                 : 7.451em;
+$form-area-width                  : 18.19em;
+$message-button-width             : $form-area-width;
 
-$email-toggle-container__margin   : 0 0 0 0;
+$email-toggle-container__margin   : 0 0 .328em 0;
 $public-toggle-container__margin  : 0 0 0 0;
 $toggle__width                    : 4.768em;
+$settings-text__width             : 200px;
 $settings-text__font-size         : .815em;
 
 //==============================================================================
 
-$header-background-color      : green;
-$nav-background-color         : yellow;
-$main-background-color        : red;
-
+// BREAKPOINTS =================================================================
 
 $breakpoint-sm      : 320px;
 $breakpoint-md      : 768px;
 $breakpoint-lg      : 1024px;
 
-$dashboard-header   : blue;
-$dashboard: (
-  title: $dashboard-header,
-  search: lighten($dashboard-header, 10%),
-  alert: darken($dashboard-header, 10%),
-);
+// COLORS ======================================================================
+
+// pallette colors
+
+$pastel-green         : #7ddf64;
+$android-green        : #b6c649;
+
+$charcoal             : #2c4251;
+
+$blue-sapphire        : #176087;
+$spanish-gray         : #969699;
+
+// COMPONENT COLORS ============================================================
+
+$header-background-color        : #e06d06;
+$nav-background-color           : #4c717a;
+$main-background-color          : #f4f1cf;
+
+$dash-search-container__color   : #525254;
+$dash-title__color              : $main-background-color;
+$alert-banner__color            : #2176ae;
+
+$social-container__color        : #e0dfd5;
+$social-image__color            : #377771;
+
+$border-color                   : $charcoal;
+$saveBttn-color                 : $blue-sapphire;
+$cancelBttn-color               : $spanish-gray;

@@ -1,4 +1,13 @@
-
+.social-stats {
+    @include mq($breakpoint-sm) {
+      max-width: 325px;
+      margin: 0 auto;
+    }
+    @include mq($breakpoint-md) {
+      max-width: none;
+      margin: 0 0;
+    }
+}
 
 .social-wrapper {
   @include flexContainer ($dir: column,
@@ -12,7 +21,10 @@
 .social-container {
   width: $social-container-width;
   height: $social-container-height;
-  margin: 0 auto;
+  border: 2px solid $border-color;
+  background-color: $social-container__color;
+  border-radius: .642em;
+  margin: .642em auto;
   @include flexContainer ($dir: row,
                           $alignItem: center);
 }
@@ -23,7 +35,7 @@
   width: $social-image-size;
   margin: 0 15px;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: $social-image__color;
   @include flexContainer ($just: center,
                           $alignItem: center);
 }

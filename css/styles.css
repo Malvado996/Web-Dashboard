@@ -179,14 +179,17 @@ th {
 
 body {
   font-size: 0.815em; }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     body {
       font-size: 1em; } }
 
 h4 {
   font-size: 1em;
-  margin: 0.642em;
+  margin: 1.953em 0.642em;
   text-transform: uppercase; }
+  @media (min-width: 1024px) {
+    h4 {
+      font-size: 1.25em; } }
 
 @media (min-width: 768px) {
   #grid-container {
@@ -197,17 +200,17 @@ h4 {
 
 header {
   grid-area: header;
-  background-color: green; }
+  background-color: #e06d06; }
 
 nav {
   grid-area: nav;
-  background-color: yellow; }
+  background-color: #4c717a; }
 
 main {
   grid-area: main;
   grid-row-start: 3;
   grid-row-end: -1;
-  background-color: red; }
+  background-color: #f4f1cf; }
   @media (min-width: 768px) {
     main {
       grid-row-start: 2;
@@ -244,6 +247,7 @@ main {
   grid-area: settings; }
 
 .header-container {
+  border-bottom: 2px solid #2c4251;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -278,16 +282,19 @@ main {
 
 .bell-icon {
   height: 1.25em;
-  margin: 0 0.21em; }
+  margin: 0 0.441em; }
+  @media (min-width: 320px) {
+    .bell-icon {
+      height: 1.953em; } }
 
 #notifications {
   position: relative;
   top: -3px;
-  left: -5px;
+  left: -.815em;
   border-radius: 50%;
-  background-color: white;
-  height: 0.441em;
-  width: 0.441em; }
+  background-color: #7ddf64;
+  height: 0.512em;
+  width: 0.512em; }
 
 .profile-container {
   display: flex;
@@ -295,9 +302,14 @@ main {
   align-items: center; }
 
 .profile-pic {
-  border-radius: 50%;
+  border-radius: .441em;
+  border: 2px solid #2c4251;
   height: 1.953em;
-  margin: 9px; }
+  margin: 9px;
+  box-shadow: -3px 3px 4px 0px rgba(0, 0, 0, 0.75); }
+  @media (min-width: 320px) {
+    .profile-pic {
+      height: 3.815em; } }
 
 .profile-name {
   text-transform: uppercase; }
@@ -329,6 +341,7 @@ main {
       margin: 1.563em auto; } }
 
 .dash-title-search-container {
+  background-color: #525254;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
@@ -336,34 +349,40 @@ main {
 .dash-title {
   text-align: center;
   border-radius: 0 9px 0 0;
-  background-color: blue; }
+  background-color: #f4f1cf; }
 
 .dash-title h2 {
   font-size: 1em;
   padding: 0 9px; }
+  @media (min-width: 768px) {
+    .dash-title h2 {
+      font-size: 1.563em; } }
 
 .search {
   display: flex;
-  justify-content: center;
-  background-color: #3333ff; }
+  justify-content: center; }
 
 .searchbar {
   width: 11.642em;
   border-radius: 5px;
-  margin: auto 6px auto 6px; }
+  margin: auto 0.815em; }
 
 .alert-banner {
   display: none;
-  width: 97%;
+  width: 93%;
   margin: 13px auto;
   border-radius: 6px;
-  background-color: #0000cc;
+  background-color: #2176ae;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
+  @media (min-width: 1024px) {
+    .alert-banner {
+      width: 75%; } }
 
 .alert-banner p {
-  margin: 3px 9px; }
+  color: #ebebeb;
+  margin: .512em 1em; }
 
 @media (min-width: 320px) {
   .traffic-header {
@@ -374,7 +393,7 @@ main {
 
 .traffic-nav {
   padding: 0;
-  margin: 0 auto 9px;
+  margin: 0 9px 9px auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -382,7 +401,14 @@ main {
 
 .traffic-nav-link {
   margin: 3px 9px;
+  padding: 3px 6px;
   list-style-type: none; }
+
+.active {
+  color: #ebebeb;
+  background-color: #fd151b;
+  border-radius: 2px;
+  margin: 4px; }
 
 .widget-container-traffic {
   margin: 0 auto;
@@ -402,6 +428,15 @@ main {
     .widget-container-mobile {
       width: 42vw; } }
 
+@media (min-width: 320px) {
+  .social-stats {
+    max-width: 325px;
+    margin: 0 auto; } }
+@media (min-width: 768px) {
+  .social-stats {
+    max-width: none;
+    margin: 0 0; } }
+
 .social-wrapper {
   display: flex;
   flex-direction: column; }
@@ -412,26 +447,29 @@ main {
       justify-content: space-around; } }
 
 .social-container {
-  width: 232px;
-  height: 119px;
-  margin: 0 auto;
+  width: 14.552em;
+  height: 7.451em;
+  border: 2px solid #2c4251;
+  background-color: #e0dfd5;
+  border-radius: .642em;
+  margin: .642em auto;
   display: flex;
   flex-direction: row;
   align-items: center; }
 
 .social-image {
-  height: 70px;
-  width: 70px;
+  height: 5.96em;
+  width: 5.96em;
   margin: 0 15px;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: #377771;
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .social-icon {
-  height: 30px;
-  width: 30px; }
+  height: 3.052em;
+  width: 3.052em; }
 
 .social-text {
   margin: 0 auto; }
@@ -443,20 +481,23 @@ main {
 @media (min-width: 768px) {
   .members {
     max-width: none;
-    margin: 0 0; } }
+    margin: 0 0;
+    border-top: 2px solid #2c4251; } }
 
 .members-container {
-  margin: 16px 0;
-  max-width: 323px;
+  margin: .441em .815em;
+  border-bottom: 1px solid black;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center; }
 
 .member-image {
-  height: 61px;
-  margin: 0 8px;
-  border-radius: 5px; }
+  height: 4.768em;
+  margin: .815em .815em .815em 0;
+  border: 2px solid #2c4251;
+  border-radius: .441em;
+  box-shadow: -3px 3px 4px 0px rgba(0, 0, 0, 0.75); }
 
 .members-container p {
   margin: 0 auto; }
@@ -465,6 +506,10 @@ main {
       margin-left: auto;
       margin-right: 0; } }
 
+@media (min-width: 768px) {
+  .members-date {
+    padding-right: .642em; } }
+
 @media (min-width: 320px) {
   .recent-activities {
     max-width: 325px;
@@ -472,11 +517,13 @@ main {
 @media (min-width: 768px) {
   .recent-activities {
     max-width: none;
-    margin: 0 0; } }
+    margin: 0 0;
+    border-top: 2px solid #2c4251;
+    border-left: 2px solid #2c4251; } }
 
 .recent-activities-container {
-  margin: 16px 0;
-  width: 323px;
+  margin: .441em .815em;
+  border-bottom: 1px solid black;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -485,6 +532,14 @@ main {
 .recent-activities-text p {
   margin: 0 0 6px 0; }
 
+.activities-time {
+  font-size: .815em;
+  text-transform: uppercase; }
+
+.activities-arrow {
+  font-size: 1.25em;
+  margin: 0 1em 0 auto; }
+
 @media (min-width: 320px) {
   .message-users {
     max-width: 325px;
@@ -492,7 +547,8 @@ main {
 @media (min-width: 768px) {
   .message-users {
     max-width: none;
-    margin: 0 0; } }
+    margin: 0 0;
+    border-top: 2px solid #2c4251; } }
 
 .message-container {
   width: 90%;
@@ -501,21 +557,23 @@ main {
   flex-direction: column; }
 
 .easy-autocomplete {
-  margin: 0 auto; }
+  margin: 0 auto 0.328em auto; }
 
 .message-search {
-  width: 200px;
-  margin: 6px auto; }
+  width: 17em; }
 
 .form-area {
-  height: 100px;
-  width: 225px;
-  margin: 0 auto;
+  height: 7.451em;
+  width: 18.19em;
+  margin: .441em auto 0;
+  border: 2px solid #2c4251;
   border-radius: .328em; }
 
 .message-button {
-  width: 75px;
-  margin: 6px auto;
+  width: 18.19em;
+  margin: .441em auto 1.563em;
+  color: #ebebeb;
+  background-color: #176087;
   border-radius: .328em; }
 
 @media (min-width: 320px) {
@@ -525,10 +583,12 @@ main {
 @media (min-width: 768px) {
   .settings {
     max-width: none;
-    margin: 0 0; } }
+    margin: 0 0;
+    border-top: 2px solid #2c4251;
+    border-left: 2px solid #2c4251; } }
 
 .email-toggle-container {
-  margin: 0 0 0 0;
+  margin: 0 0 0.328em 0;
   display: flex;
   flex-direction: row;
   align-items: center; }
@@ -549,23 +609,32 @@ main {
   justify-content: center; }
 
 .timezone-field {
-  margin: 10px auto;
+  margin: .441em auto 0;
   width: 200px;
   border-radius: .328em; }
 
 .settings-button-container {
-  width: 130px;
-  margin: 6px auto 16px;
+  width: 200px;
+  margin: .441em auto 1em;
   display: flex;
   justify-content: space-around; }
 
-.button-primary, .button-disabled {
-  width: 4.768em;
-  margin: 0 .441em;
-  border-radius: .328em; }
+.button-primary {
+  width: 5.96em;
+  margin: 0.441em;
+  border-radius: .328em;
+  color: #ebebeb;
+  background-color: #176087; }
+
+.button-disabled {
+  width: 5.96em;
+  margin: 0.441em;
+  border-radius: .328em;
+  color: #ebebeb;
+  background-color: #969699; }
 
 .settings-text {
-  width: 175px;
+  width: 200px;
   padding-left: 6px;
   font-size: 0.815em;
   text-transform: uppercase; }

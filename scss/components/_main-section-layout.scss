@@ -2,30 +2,33 @@
 // DASHBOARD AREA LAYOUT AND ELEMENTS/CHARTS ===================================
 
 .dash-title-search-container {
+  background-color: $dash-search-container__color;
   @include flexContainer($dir: row, $just: space-between)
 }
 
 .dash-title {
   text-align: center;
   border-radius: 0 9px 0 0;
-  background-color: map-get($dashboard, title);
+  background-color: $dash-title__color;
 }
 
 .dash-title h2 {
   font-size: $dash-title-font-size;
   padding: 0 9px;
+  @include mq($breakpoint-md) {
+    font-size: $dash-title__font-size--md;
+  }
 }
 
 // SEARCHBAR DIV CONTAINER
 .search {
   @include flexContainer($just: center);
-  background-color: map-get($dashboard, search);
 }
 
 .searchbar {
   width: $searbar-width;
   border-radius: 5px;
-  margin: auto 6px auto 6px;
+  margin: $searchbar__margin;
 }
 
 .alert-banner {
@@ -33,15 +36,17 @@
   width: $alert-banner-width;
   margin: 13px auto;
   border-radius: 6px;
-  background-color: map-get($dashboard, alert);
+  background-color: $alert-banner__color;
   @include flexContainer($dir: row, $just: space-between);
+  @include mq($breakpoint-lg) {
+    width: $alert-banner__width--lg;
+  }
 }
 
 .alert-banner p {
-  margin: 3px 9px;
+  color: #ebebeb;
+  margin: .512em 1em;
 }
-
-
 
 // LINE CHART AND NAV ==========================================================
 
@@ -55,7 +60,7 @@
 
 .traffic-nav {
   padding: 0;
-  margin: 0 auto 9px;
+  margin: 0 9px 9px auto;
   @include flexContainer($dir: row,
                          $just: space-between,
                          $wrap: wrap)
@@ -63,16 +68,26 @@
 
 .traffic-nav-link {
   margin: 3px 9px;
+  padding: 3px 6px;
   list-style-type: none;
 }
 
+.active {
+  color: #ebebeb;
+  background-color: #fd151b;
+  border-radius: 2px;
+  margin: 4px;
+}
+
 // LINE CHART ==================================================================
+
 .widget-container-traffic {
   margin: 0 auto;
   width: $traffic-chart-width;
 }
 
 // DAILY CHART =================================================================
+
 .widget-container-daily {
   margin: 0 auto;
   width: $daily-chart-width;
@@ -82,6 +97,7 @@
 }
 
 // MOBILE CHART ================================================================
+
 .widget-container-mobile {
   margin: 0 auto;
   width: $mobile-chart-width;

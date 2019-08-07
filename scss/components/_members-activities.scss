@@ -8,12 +8,13 @@
   @include mq($breakpoint-md) {
     max-width: none;
     margin: 0 0;
+    border-top: 2px solid $border-color;
   }
 }
 
 .members-container {
-  margin: 16px 0;
-  max-width: $member-activity-container-width;
+  margin: .441em .815em;
+  border-bottom: 1px solid black;
   @include flexContainer($dir: row,
                          $wrap: wrap,
                          $alignItem: center)
@@ -21,8 +22,10 @@
 
 .member-image {
   height: $member-image-height;
-  margin: 0 8px;
-  border-radius: 5px;
+  margin: .815em .815em .815em 0;
+  border: 2px solid $border-color;
+  border-radius: .441em;
+  box-shadow: -3px 3px 4px 0px rgba(0,0,0,0.75);
 }
 
 .members-container p {
@@ -30,6 +33,12 @@
   @include mq ($breakpoint-sm) {
     margin-left: auto;
     margin-right: 0;
+  }
+}
+
+.members-date {
+  @include mq($breakpoint-md) {
+    padding-right: .642em;
   }
 }
 
@@ -43,12 +52,14 @@
   @include mq($breakpoint-md) {
     max-width: none;
     margin: 0 0;
+    border-top: 2px solid $border-color;
+    border-left: 2px solid $border-color;
   }
 }
 
 .recent-activities-container {
-  margin: 16px 0;
-  width: $member-activity-container-width;
+  margin: .441em .815em;
+  border-bottom: 1px solid black;
   @include flexContainer($dir: row,
                          $wrap: wrap,
                          $alignItem: center)
@@ -56,4 +67,14 @@
 
 .recent-activities-text p {
   margin: 0 0 6px 0;
+}
+
+.activities-time {
+  font-size: .815em;
+  text-transform: uppercase;
+}
+
+.activities-arrow {
+  font-size: 1.25em;
+  margin: 0 1em 0 auto;
 }
