@@ -10,6 +10,10 @@
 
 .nav-icon {
   height: $nav-icon-height;
+  padding: 0 .512em;
+  &:hover {
+    border-left: .21em solid $pastel-green;
+  }
   @include mq($breakpoint-sm) {
     height: $nav-icon-height__sm;
   }

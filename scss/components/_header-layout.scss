@@ -40,6 +40,10 @@
     .bell-icon {
       height: $bell-icon-height;
       margin: $bell-icon__margin;
+      transition: all .3s ease;
+      &:hover {
+        transform: scale(1.3) rotate(-20deg);
+      }
       @include mq($breakpoint-sm) {
         height: $bell-icon__height--md;
       }

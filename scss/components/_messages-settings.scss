@@ -19,12 +19,11 @@
   @include flexContainer($dir: column,)
 }
 
-.easy-autocomplete{
-  margin: $easy-autocomplete__margin;
-}
-
 .message-search {
   width: $message-search-width;
+  margin: 0 auto .441em;
+  border-radius: .328em;
+  border: 2px solid $border-color;
 }
 
 .form-area {

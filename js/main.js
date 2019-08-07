@@ -15,12 +15,12 @@ bell.addEventListener ('click', ()=> {
 
 let alert = document.getElementById('alert');
 
-alert.innerHTML = "<div class='alert-banner'><p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p><p class='alert-banner-close'><strong>X</strong></p></div>"
+alert.innerHTML = "<div class='alert-banner'><p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p><p><strong  class='alert-banner-close'>X</strong></p></div>"
 
 alert.addEventListener('click', e => {
-  const element = e.target;
+	const element = e.target;
   if (element.classList.contains("alert-banner-close")) {
-    alert.style.display = "none"
+    alert.style.display = "none";
   }
 })
 
@@ -247,15 +247,16 @@ send.addEventListener ('click', () => {
 
 // AUTOCOMPLETE ================================================================
 
-let options = {
-	data: ["vader.dog@example.com",
-				 "rufus.dog@example.com",
-				 "snickers.dog@example.com",
-				 "bandit.dog@example.com",
-			 ]
-};
+const members = ["vader.dog@example.com",
+				 			   "rufus.dog@example.com",
+							   "snickers.dog@example.com",
+				 			   "bandit.dog@example.com",]
 
-$("#userField").easyAutocomplete(options);
+$(function () {
+	$('#userField').autocomplete({
+		source: [members]
+	});
+});
 
 // LOCAL STORAGE ===============================================================
 
