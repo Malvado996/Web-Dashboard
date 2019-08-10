@@ -36,6 +36,7 @@
   width: $alert-banner-width;
   margin: 13px auto;
   border-radius: 6px;
+  border: 2px solid $border-color;
   background-color: $alert-banner__color;
   @include flexContainer($dir: row, $just: space-between);
   @include mq($breakpoint-lg) {

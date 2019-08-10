@@ -5,7 +5,7 @@
     }
     @include mq($breakpoint-md) {
       max-width: none;
-      margin: 0 0;
+      margin: 2em 0;
     }
 }
 
@@ -25,6 +25,7 @@
   background-color: $social-container__color;
   border-radius: .642em;
   margin: .642em auto;
+  box-shadow: -3px 3px 4px 0px rgba(0,0,0,0.75);
   @include flexContainer ($dir: row,
                           $alignItem: center);
 }

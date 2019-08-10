@@ -4,12 +4,21 @@ console.log('hello world');
 // BELL NOTIFICATIONS ==========================================================
 const bell = document.getElementById('bell');
 const notifications = document.getElementById('notifications');
+const dropUl = document.getElementById('drop-ul');
+const dropClose = document.getElementsByClassName('drop-close');
 
 bell.addEventListener ('click', ()=> {
-	window.alert("Q: What part of a house is a dog's favorite?");
-	window.alert('A: The woof!!!');
-	notifications.style.display = 'none';
+	notifications.style.backgroundColor = "#e06d06",
+	dropUl.style.display = 'block';
 });
+
+for (i = 0; i < dropClose.length; i++) {
+	dropClose[i].addEventListener('click', ()=> {
+		console.log(event.target.parentNode.parentNode);
+		event.target.parentNode.parentNode.style.display = 'none';
+	})
+}
+
 
 // DASHBOARD ALERT =============================================================
 

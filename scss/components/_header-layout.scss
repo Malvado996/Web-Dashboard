@@ -1,7 +1,7 @@
 
 // CONTAINS ALL HEADER ELEMENTS
 .header-container {
-  border-bottom: 2px solid $border-color;
+  border-bottom: 3px solid $border-color;
   @include flexContainer ($dir: column,
                           $just: center,
                           $alignItem: center);
@@ -18,6 +18,10 @@
     font-size: $header-title__font-size-sm;
     margin: $header-title__margin-sm;
   }
+}
+
+.copy {
+  font-size: .441em;
 }
 
 // CONTAINS BELL/PROFILE DIVS
@@ -38,7 +42,7 @@
 }
 
     .bell-icon {
-      height: $bell-icon-height;
+      height: $bell-icon__height--md;
       margin: $bell-icon__margin;
       transition: all .3s ease;
       &:hover {
@@ -51,12 +55,51 @@
 
     #notifications {
       position: relative;
-      top: -3px;
-      left: -.815em;
+      top: 0px;
+      left: -7px;
       border-radius: 50%;
       background-color: $pastel-green;
       height: $notification-alarm-size;
       width: $notification-alarm-size;
+    }
+
+    //div container for drop content
+    .drop-ul {
+      display: none;
+      position: relative;
+      top: 35px;
+      left: -50px;
+      margin: 0;
+      @include mq($breakpoint-sm) {
+        top: 50px;
+        left: -55px;
+      }
+      @include mq ($breakpoint-lg) {
+        top: 55px;
+        left: -90px;
+      }
+    }
+
+    .drop-li {
+      width: 200px;
+      border-radius: 3px;
+      color: #ebebeb;
+      background-color: $alert-banner__color;
+      list-style: none;
+      margin: .21em 0 .21em -40px;
+      padding: .21em;
+      border: 2px solid $border-color;
+      box-shadow: -3px 3px 4px 0px rgba(0,0,0,0.75);
+      @include flexContainer($dir: row,
+                             $just: space-between,);
+      @include mq($breakpoint-lg) {
+        width: 260px;
+      }
+    }
+
+    .drop-ul li p {
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
 // PROFILE PIC/NAME CONTAINER
