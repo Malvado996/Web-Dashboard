@@ -49,6 +49,10 @@
   margin: .512em 1em;
 }
 
+.alert-banner-close {
+  cursor: pointer;
+}
+
 // LINE CHART AND NAV ==========================================================
 
 .traffic-header {
@@ -71,6 +75,7 @@
   margin: 3px 9px;
   padding: 3px 6px;
   list-style-type: none;
+  cursor: pointer;
 }
 
 .active {

@@ -45,6 +45,7 @@
       height: $bell-icon__height--md;
       margin: $bell-icon__margin;
       transition: all .3s ease;
+      cursor: pointer;
       &:hover {
         transform: scale(1.3) rotate(-20deg);
       }
@@ -100,6 +101,10 @@
     .drop-ul li p {
       margin-top: 0;
       margin-bottom: 0;
+    }
+
+    .drop-close {
+      cursor: pointer;
     }
 
 // PROFILE PIC/NAME CONTAINER
